@@ -90,6 +90,7 @@ public interface ServletRequest {
      *         encoding, or <code>null</code> if the request does not specify a
      *         character encoding
      */
+    /*获取客户端编码的方法，对应HTTP协议的Content-Type头部*/
     public String getCharacterEncoding();
 
     /**
@@ -351,6 +352,7 @@ public interface ServletRequest {
      *
      * @return the preferred <code>Locale</code> for the client
      */
+    /*获取客户端语言环境的方法，对应HTTP的Accept-Language头部*/
     public Locale getLocale();
 
     /**
@@ -364,6 +366,7 @@ public interface ServletRequest {
      * @return an <code>Enumeration</code> of preferred <code>Locale</code>
      *         objects for the client
      */
+    /*获取客户端语言环境的方法，对应HTTP的Accept-Language头部*/
     public Enumeration<Locale> getLocales();
 
     /**
@@ -373,6 +376,7 @@ public interface ServletRequest {
      * @return a boolean indicating if the request was made using a secure
      *         channel
      */
+    /*判断是否为HTTPS的方法*/
     public boolean isSecure();
 
     /**
