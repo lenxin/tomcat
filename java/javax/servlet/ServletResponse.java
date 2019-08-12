@@ -269,6 +269,7 @@ public interface ServletResponse {
      * Forces any content in the buffer to be written to the client. A call to
      * this method automatically commits the response, meaning the status code
      * and headers will be written.
+     * 强制刷新缓冲区
      *
      * @throws IOException if an I/O occurs during the flushing of the response
      *
@@ -283,6 +284,7 @@ public interface ServletResponse {
      * Clears the content of the underlying buffer in the response without
      * clearing headers or status code. If the response has been committed, this
      * method throws an <code>IllegalStateException</code>.
+     * 清空缓冲区中的内容，但不清空请求头部和状态码
      *
      * @see #setBufferSize
      * @see #getBufferSize
@@ -295,6 +297,7 @@ public interface ServletResponse {
     /**
      * Returns a boolean indicating if the response has been committed. A
      * committed response has already had its status code and headers written.
+     * 判断是否有任何响应字节已经返回给客户端
      *
      * @return a boolean indicating if the response has been committed
      * @see #setBufferSize
@@ -308,6 +311,7 @@ public interface ServletResponse {
      * Clears any data that exists in the buffer as well as the status code and
      * headers. If the response has been committed, this method throws an
      * <code>IllegalStateException</code>.
+     * 清空缓冲区内容，同时清空头部信息和状态码
      *
      * @exception IllegalStateException
      *                if the response has already been committed

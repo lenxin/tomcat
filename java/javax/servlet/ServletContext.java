@@ -60,6 +60,7 @@ public interface ServletContext {
 
     /**
      * Return the main path associated with this context.
+     * 返回与此上下文关联的主路径
      *
      * @return The main context path
      *
