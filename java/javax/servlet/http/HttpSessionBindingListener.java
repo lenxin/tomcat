@@ -25,6 +25,7 @@ import java.util.EventListener;
  * This may be as a result of a servlet programmer explicitly unbinding an
  * attribute from a session, due to a session being invalidated, or due to a
  * session timing out.
+ * 对象想要在保存到会话或从会话中移除时得到通知，可实现此接口
  *
  * @see HttpSession
  * @see HttpSessionBindingEvent
